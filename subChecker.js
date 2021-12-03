@@ -3,7 +3,7 @@ const https = require("https")
 const readLine = require("readline")
 const fs = require("fs")
 const path = require("path")
-
+const colors = require("colors")
 
 
 
@@ -14,7 +14,7 @@ const rl = readLine.createInterface({
 
 
 function logo() {
-    console.log(`  
+    console.log(colors.yellow( `  
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMWXKOkkxxddxxkO0KNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMWX0xoc:::::::::::::cldk0NWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -40,32 +40,37 @@ MMMMMMMMMMMWX0OxdoooooooddxO0XNWWWWWKkl:::coOXNWWWWWWWWWWWWWWWNNNNNNNXKXXXXXKKNM
 MMMMMMMMMMMMMMWWWNNNNNNNWWWWWWWWWWWWWWKkdl::coOXNWWWWWWWWWWWWWNNNNNNNXKXXXXXKKNM
 ::: Creted By S4MSecurity :::::::::WWWWWNKkl::coOKNWWWWWWWWWWWNNNNWNNXKXXXXXKKNM
 MMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWKkl::cdKNWWWWWWWWWWNNNWWNNXKKXXXKKXWM
-    `)
+    `))
 
 }
 
-function statusControl(control) {
-    console.log(control)
+function statusControl(status, control) {
+    if (status == 1) {
+        console.log(colors.green("[+] "+control))
+    }
+    if(status == 0){
+        console.log(colors.red("[-] "+control))
+    }
 }
 
 function checkAddress(ssl, url) {
     if (ssl == "http") {
         http.get(url, function (res) {
             if (res) {
-                statusControl("[+] " + url)
+                statusControl(1, url)
             }
         }).on("error", function (e) {
-            statusControl("[-] " + url)
+            statusControl(0, url)
         })
     }
-    else if(ssl == "https"){
+    else if (ssl == "https") {
         https.get(url, function (res) {
             if (res) {
-                statusControl("[+] " + url)
+                statusControl(1, url)
             }
         }).on("error", function (e) {
-            statusControl("[-] " + url)
-        })        
+            statusControl(0, url)
+        })
     }
 }
 
@@ -91,17 +96,6 @@ function fileReading(ssl, filePath, webAddress) {
 
 
 
-/*
-//http control
-
-http.get("http://www.example.com", function (res) {
-    console.log(res.headers)
-}).on("error", function (e) {
-    console.log(e)
-})
-
-*/
-
 function webAdress(ssl, filePath) {
     rl.question("\n|| Enter web address [Example: example.com]: ", function (webAddress) {
         fileReading(ssl, filePath, webAddress)
@@ -126,7 +120,6 @@ function fileInput(ssl) {
 
 
 
-/* Start Program and sll selected */
 function startProgram() {
     logo()
     rl.question("|| How to heyper text transfer protocol: Http or Https?\n|| Enter to Http = 0 / Https = 1 : ", function (sslAsk) {
