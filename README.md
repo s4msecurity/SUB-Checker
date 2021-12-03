@@ -8,5 +8,5 @@ It serves to extract a subdomain list on a site by reading the inside of the fil
 Installation And Usage
 1) Node JS must be installed on your system.<br>
 To download: https://nodejs.org/en/download/
-2) Go to the directory where the script is located on the console screen and type "<b>node subChecker.js</b>" and run it.
-
+2) Go to the directory where the script is located on the console screen and type "<b>npm install</b>" and run it.
+3) Then typing: "<b>node subChecker.js</b>
