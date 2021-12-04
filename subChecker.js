@@ -24,7 +24,7 @@ MMWXxc::::::::::::::::::::::clllllc:lkNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MWKo::::::::::::::::::::::cclllllllc::d0KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKXNWMM
 MKo::::::::::::::::::::::cllllllllllc::cloddddddddddddddddddddddddddddddddddOXWM
 Xd::::::::::::::::::::::cllllllllllllc:::::::::::::::::::::::::::::::xO000000KNM
-Occdxxxxxxxxxxxxdxxxxxxxkkkkkkkkkkkkkkdc:::: URL CHECKER :::::::::::.kKNNNNNXKNM
+Occdxxxxxxxxxxxxdxxxxxxxkkkkkkkkkkkkkkdc:::: SUB CHECKER :::::::::::.kKNNNNNXKNM
 x:xNWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXo;::::::::::::::::::::::::::::XKXXXXXKKNM
 d:kWMWNWWWWWWWWWWMWWWWNNWWWWWWMWWWWMMMNd::xXWWWWWWWWWWWWWWWWWWNNNWWNNXKXXXXXXKNM
 d:kWWNXXXNNWNNXXNWNNNXXXXXXXXWWNXXNMMMXd::xXWWWWWWWWWWWWWWWWWWNNNNNNNXKXXXXXKKNM
